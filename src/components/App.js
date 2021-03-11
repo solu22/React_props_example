@@ -1,24 +1,28 @@
 import React from "react";
+import Card from "./Card";
+
+
+
+
+
 
 const App=()=>{
 return(
  <div>
-    <h2>Image Details</h2>
-        <img src="https://picsum.photos/200" alt="Id1" />
-        <p>This is image1</p>
-        <p>i@yahoo.com</p>
+    <h2>Props with images</h2>
+        
+        <Card 
+        name="Img1" 
+        img="https://picsum.photos/200"
+        email="1@yahoo.com"
+        />
 
-        <img src="https://picsum.photos/200" alt="Id1" />
-        <p>This is image2</p>
-        <p>i@yahoo.com</p>
-
-        <img src="https://picsum.photos/200" alt="Id1" />
-        <p>This is image3</p>
-        <p>i@yahoo.com</p>
-
-        <img src="https://picsum.photos/200" alt="Id1" />
-        <p>This is image4</p>
-        <p>i@yahoo.com</p>
+        <Card
+        name="img2"
+        img="https://picsum.photos/200"
+        email="2@yahoo.com"
+        
+         />
 
   </div>
 )
