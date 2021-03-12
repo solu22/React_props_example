@@ -1,27 +1,28 @@
 import React from "react";
+import Card from "./Card"
+import contactList from "./contact";
 
 const App = () => {
+  
   return (
     <div>
-      <h1 className="heading">Props with images</h1>
-      <div className="card-details">
-            <div className="upper-details">
-                <h2 className="imgheading">Img1</h2>
-                <img
-                    src="https://picsum.photos/200"
-                    alt="img1"
-                    className="circle-img"
-                />
-            </div>
-            <div className="lower-details">
-            <p className="info">Call: +3581111111</p>
-            <p className="info">Email: img1@yahoo.com</p>
-            </div>
-      </div>
-    </div>
-  );
-};
+      <h1 className="heading">Simplified props</h1>
 
+      {contactList.map(contact=>{
+        return(
+         <Card 
+           key={contact.id}
+           name={contact.name}
+           src={contact.url}
+           tel={contact.Call}
+           email={contact.Email}
+           />
+        )
+      })};
+     
+    </div>
+  )
+};
 export default App;
 
 //    {/* <Card

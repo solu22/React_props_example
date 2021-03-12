@@ -1,17 +1,23 @@
-const Card = (props) => {
-  return (
-   <h1 className="heading">Details</h1>
-    <div className="card-details">
-				<div className="upper-details">
-						<h2>{props.name}</h2>
-						<img src={props.img} alt="rand1" />
-				</div>
+import React from "react";
+import Avatar from "./Avatar";
+import contactList from "./contact";
+import Details from "./Details";
 
-     <div className="lower-details">
-         <p>Email: {props.email}</p>
-		 </div>
-    </div>
-  );
+const Card = (props) => {
+	return (
+
+		<div className="card-details">
+			<div className="upper-details">
+				<h2 className="imgheading">{props.name}</h2>
+        <Avatar src={props.src} />
+				
+			</div>
+			<div className="lower-details">
+				<Details info={props.tel} />
+				<Details info={props.email}/>
+			</div>
+		</div>
+	)
 };
 
 export default Card;
