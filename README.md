@@ -1,2 +1,2 @@
 # React_props_example
-Created with CodeSandbox
+Using props to render the image card info..
